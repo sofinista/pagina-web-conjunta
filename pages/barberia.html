@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Barbería - The Royal Cut</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS PROPIO -->
+    <link rel="stylesheet" href="../css/barberia.css">
+</head>
+<body>
+
+<!-- 🧭 NAVBAR -->
+<header>
+<nav class="navbar">
+
+    <div class="logo">The Royal Cut</div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <ul class="menu" id="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#estilos">Estilos</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <a href="https://wa.me/573000000000" class="btn-reserva">
+        Reservar
+    </a>
+
+</nav>
+</header>
+
+<!-- 💈 HERO -->
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1>Tu estilo, tu identidad</h1>
+        <p>Barbería moderna con cortes premium y estilo urbano</p>
+        <a href="#reservas" class="btn">Agendar cita</a>
+    </div>
+</section>
+
+<!-- ✂️ SERVICIOS -->
+<section class="experiences" id="servicios">
+    <h2>Servicios</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Corte clásico</h3>
+            <p>Estilo limpio y elegante para cualquier ocasión</p>
+        </div>
+
+        <div class="card">
+            <h3>Fade moderno</h3>
+            <p>Degradados profesionales con acabado perfecto</p>
+        </div>
+
+        <div class="card">
+            <h3>Barba premium</h3>
+            <p>Perfilado, hidratación y diseño de barba</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- 🖼️ ESTILOS / GALERÍA -->
+<section class="gallery" id="estilos">
+    <h2>Estilos</h2>
+
+    <div class="gallery-grid">
+        <img src="../assets/images/barberia/1.jpg">
+        <img src="../assets/images/barberia/2.jpg">
+        <img src="../assets/images/barberia/3.jpg">
+    </div>
+</section>
+
+<!-- 📅 RESERVAS -->
+<form id="form-reserva">
+
+    <input type="text" id="nombre" placeholder="Nombre" required>
+
+    <input type="date" id="fecha" required>
+
+    <select id="servicio">
+        <option value="Corte clásico">Corte clásico</option>
+        <option value="Fade moderno">Fade moderno</option>
+        <option value="Barba premium">Barba premium</option>
+    </select>
+
+    <button type="submit">Agendar cita</button>
+
+</form>
+
+<!-- 📲 CONTACTO -->
+<section class="contacto" id="contacto">
+    <h2>Contáctanos</h2>
+    <a href="https://wa.me/573000000000" class="btn">WhatsApp</a>
+</section>
+
+<!-- 💬 BOTÓN -->
+<a href="https://wa.me/573000000000" class="whatsapp">💬</a>
+
+<!-- FOOTER -->
+<footer>
+    <p>© The Royal Cut Barbería</p>
+</footer>
+
+<!-- JS -->
+<script src="../js/barberia.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>

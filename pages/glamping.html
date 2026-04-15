@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Glamping - Casa Aurora</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS PROPIO -->
+    <link rel="stylesheet" href="../css/glamping.css">
+</head>
+<body>
+
+<!-- 🧭 NAVBAR -->
+<header>
+<nav class="navbar">
+
+    <div class="logo">Aurora Glamping</div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <ul class="menu" id="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#experiencias">Experiencias</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <a href="https://wa.me/573000000000" class="btn-reserva">
+        Reservar
+    </a>
+
+</nav>
+</header>
+
+<!-- 🌲 HERO -->
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1>Escápate a la naturaleza</h1>
+        <p>Vive una experiencia única bajo las estrellas</p>
+        <a href="#reservas" class="btn">Explorar experiencias</a>
+    </div>
+</section>
+
+<!-- ✨ EXPERIENCIAS -->
+<section class="experiences" id="experiencias">
+    <h2>Experiencias</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Escapada romántica</h3>
+            <p>Noche privada + decoración especial + cena</p>
+        </div>
+
+        <div class="card">
+            <h3>Fin de semana natural</h3>
+            <p>2 noches rodeado de naturaleza y tranquilidad</p>
+        </div>
+
+        <div class="card">
+            <h3>Experiencia fogata</h3>
+            <p>Fogata, estrellas y conexión total</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- 🖼️ GALERÍA -->
+<section class="gallery" id="galeria">
+    <h2>Vive el espacio</h2>
+
+    <div class="gallery-grid">
+        <img src="../assets/images/glamping/1.jpg">
+        <img src="../assets/images/glamping/2.jpg">
+        <img src="../assets/images/glamping/3.jpg">
+    </div>
+</section>
+
+<!-- 📅 RESERVAS -->
+<form id="form-reserva">
+
+    <input type="text" id="nombre" placeholder="Nombre" required>
+
+    <input type="date" id="entrada" required>
+    <input type="date" id="salida" required>
+
+    <select id="experiencia">
+        <option value="Escapada romántica">Escapada romántica</option>
+        <option value="Fin de semana natural">Fin de semana natural</option>
+        <option value="Experiencia fogata">Experiencia fogata</option>
+    </select>
+
+    <button type="submit">Reservar</button>
+
+</form>
+
+<!-- 📲 CONTACTO -->
+<section class="contacto" id="contacto">
+    <h2>Contáctanos</h2>
+    <a href="https://wa.me/573000000000" class="btn">WhatsApp</a>
+</section>
+
+<!-- 💬 BOTÓN -->
+<a href="https://wa.me/573000000000" class="whatsapp">💬</a>
+
+<!-- FOOTER -->
+<footer>
+    <p>© Aurora Glamping</p>
+</footer>
+
+<!-- JS -->
+<script src="../js/glamping.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>
