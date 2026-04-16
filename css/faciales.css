@@ -1,0 +1,79 @@
+/* ============================================================
+   FACIALES — estilos específicos (NO repetir base)
+============================================================ */
+
+/* HERO más elegante */
+.hero-slider .content {
+    max-width: 520px;
+}
+
+.hero-slider h1 {
+    letter-spacing: 0.02em;
+}
+
+/* Sección experiencia más premium */
+.exp-card {
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.exp-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Grid de tratamientos más limpio */
+.grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Cards más elegantes */
+.card {
+    border: 1px solid rgba(138,158,138,0.12);
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    background: var(--warm);
+    box-shadow: 0 10px 40px rgba(138,158,138,0.15);
+}
+
+/* Títulos más premium */
+.card h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* Beneficios estilo lujo */
+.beneficios {
+    margin-top: 24px;
+}
+
+.beneficios li {
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+}
+
+/* CTA más impactante */
+.contact h2 {
+    letter-spacing: 0.02em;
+}
+
+/* Espaciado más aireado (clave premium) */
+.services {
+    padding-top: 140px;
+}
+
+.experiences {
+    padding-top: 140px;
+}
+
+/* Responsive más fino */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 32px 24px;
+    }
+}

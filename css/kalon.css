@@ -6,8 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tenor+Sans&display=swap');
 
 :root {
-    --sage: #8a9e8a;
-    --sage-light: #b5c5b5;
+    --sage: #69d2c2;
+    --sage-light: #69d2c2;
     --cream: #f7f3ed;
     --warm: #ede7dc;
     --stone: #c4b8a8;
@@ -98,7 +98,7 @@ body {
     transition: background 0.3s, transform 0.3s;
 }
 
-.btn-reserva:hover { background: #6d8a6d; transform: translateY(-1px); }
+.btn-reserva:hover { background: #69d2c2; transform: translateY(-1px); }
 
 .menu-toggle {
     display: none;
@@ -379,78 +379,50 @@ h2 {
     margin-top: 28px;
 }
 
-/* ── EXPERIENCES ─────────────────────── */
-.experiences {
+/* ── ANTES / DESPUÉS ─────────────────────── */
+.ba-gallery {
+    padding: 120px 0;
     background: var(--warm);
-    padding: 120px 52px;
-    border-top: 1px solid rgba(138,158,138,0.12);
-    border-bottom: 1px solid rgba(138,158,138,0.12);
+    overflow: hidden;
 }
 
-.exp-content { max-width: var(--max); margin: 0 auto; }
-
-.exp-cards { display: flex; flex-direction: column; gap: 1px; }
-
-.exp-card {
+.ba-track {
     display: flex;
-    align-items: center;
-    gap: 40px;
-    background: var(--bg);
-    padding: 36px 40px;
-    border: 1px solid rgba(138,158,138,0.12);
-    transition: background 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+    gap: 28px;
+    padding: 0 52px;
+    cursor: grab;
+    user-select: none;
 }
 
-.exp-card:hover {
-    background: white;
-    box-shadow: 0 8px 40px rgba(138,158,138,0.12);
+.ba-track:active {
+    cursor: grabbing;
 }
 
-.exp-number {
-    font-family: var(--font-display);
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: rgba(138,158,138,0.25);
+.ba-card {
+    min-width: 320px;
     flex-shrink: 0;
-    min-width: 60px;
 }
 
-.exp-body { flex: 1; }
-
-.exp-body h3 {
-    font-family: var(--font-display);
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: var(--ink);
+.ba-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
     margin-bottom: 6px;
 }
 
-.exp-body p {
+/* efecto elegante */
+.ba-card img:first-child {
+    opacity: 0.7;
+}
+
+.ba-card p {
     font-family: var(--font-display);
     font-style: italic;
-    font-size: 0.95rem;
-    color: rgba(28,28,28,0.45);
-    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: rgba(28,28,28,0.6);
 }
-
-.exp-tag {
-    font-size: 0.62rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--sage);
-}
-
-.exp-arrow {
-    color: rgba(138,158,138,0.4);
-    transition: color 0.3s, transform 0.3s;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    flex-shrink: 0;
-}
-
-.exp-card:hover .exp-arrow { color: var(--sage); transform: translateX(4px); }
 
 /* ── GALLERY ─────────────────────────── */
 .gallery {
@@ -651,4 +623,35 @@ h2 {
 
     .footer-inner { flex-direction: column; text-align: center; }
     .footer { padding: 28px 24px; }
+}
+
+.logo img {
+    height: 60px; /* ajusta según se vea mejor */
+    width: auto;
+    display: block;
+}
+
+.footer-logo img {
+    height: 60px;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-info {
+    text-align: center;
+    font-size: 14px;
+    color: #7A7A7A;
+    line-height: 1.5;
+    border-top: 1px solid #EAEAEA;
+    padding-top: 10px;
+}
+
+.footer-copy {
+    font-size: 13px;
+    color: #A0A0A0;
 }

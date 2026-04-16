@@ -1,0 +1,51 @@
+/* MEDICINA ESTÉTICA — estilo elegante / limpio */
+
+/* Overlay más suave que corporales */
+.hero-slider .slide-overlay {
+    background: linear-gradient(
+        120deg,
+        rgba(28,28,28,0.75),
+        rgba(28,28,28,0.2)
+    );
+}
+
+/* Texto más delicado */
+.hero-slider h1 {
+    letter-spacing: 0.01em;
+}
+
+/* Cards más suaves */
+.card {
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* Grid más limpio */
+.grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Beneficios más sutiles */
+.beneficios li {
+    font-weight: 400;
+}
+
+/* Espaciado elegante */
+.services {
+    padding-top: 120px;
+}
+
+.experiences {
+    padding-top: 120px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
