@@ -1,44 +1,38 @@
-// ===== MENU RESPONSIVE =====
-const toggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("menu");
+/* ============================================================
+   THE ROYAL CUT — barberia.js
+============================================================ */
 
-toggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
-});
+document.addEventListener("DOMContentLoaded", () => {
 
-// ===== SMOOTH SCROLL =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
+    // ── FORMULARIO → WHATSAPP ──────────────────────────
+    const form = document.getElementById("form-reserva");
 
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
+    if (form) {
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
 
-        menu.classList.remove("active");
-    });
-});
+            const nombre   = document.getElementById("nombre")?.value?.trim();
+            const fecha    = document.getElementById("fecha")?.value;
+            const servicio = document.getElementById("servicio")?.value;
 
-// ===== FORM A WHATSAPP =====
-const form = document.getElementById("form-reserva");
+            if (!nombre || !fecha || !servicio) {
+                alert("Por favor completa todos los campos.");
+                return;
+            }
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
+            const mensaje =
+`Hola, quiero agendar una cita en The Royal Cut ✂️
 
-    const nombre = document.getElementById("nombre").value;
-    const fecha = document.getElementById("fecha").value;
-    const servicio = document.getElementById("servicio").value;
+👤 Nombre: ${nombre}
+📅 Fecha: ${fecha}
+💈 Servicio: ${servicio}
 
-    const mensaje = `Hola, quiero agendar una cita:
-    
-Nombre: ${nombre}
-Fecha: ${fecha}
-Servicio: ${servicio}`;
+¡Quedo atento a la confirmación!`;
 
-    const url = `https://wa.me/573000000000?text=${encodeURIComponent(mensaje)}`;
+            const telefono = "573226594124";
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, "_blank");
+        });
+    }
 
-    window.open(url, "_blank");
 });

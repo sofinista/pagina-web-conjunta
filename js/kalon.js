@@ -1,48 +1,81 @@
+/* ============================================================
+   KALON — kalon.js
+============================================================ */
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    // 🎯 SLIDER
-    const slides = document.querySelectorAll(".slide");
-    const next = document.querySelector(".next");
-    const prev = document.querySelector(".prev");
+    // ── HERO SLIDER ────────────────────────────────────
+    const slides = document.querySelectorAll(".hero-slider .slide");
+    const dots   = document.querySelectorAll(".dot");
+    const nextBtn = document.querySelector(".next");
+    const prevBtn = document.querySelector(".prev");
 
-    let index = 0;
+    if (!slides.length) return;
 
-    function showSlide(i) {
-        slides.forEach(slide => slide.classList.remove("active"));
-        slides[i].classList.add("active");
+    let current = 0;
+    let autoplay;
+
+    function goTo(index) {
+        slides[current].classList.remove("active");
+        if (dots[current]) dots[current].classList.remove("active");
+
+        current = (index + slides.length) % slides.length;
+
+        slides[current].classList.add("active");
+        if (dots[current]) dots[current].classList.add("active");
     }
 
-    if (next && prev) {
-        next.addEventListener("click", () => {
-            index = (index + 1) % slides.length;
-            showSlide(index);
-        });
-
-        prev.addEventListener("click", () => {
-            index = (index - 1 + slides.length) % slides.length;
-            showSlide(index);
-        });
-
-        setInterval(() => {
-            index = (index + 1) % slides.length;
-            showSlide(index);
-        }, 5000);
+    function startAutoplay() {
+        autoplay = setInterval(() => goTo(current + 1), 5500);
     }
 
-    // 🧭 MENÚ (LO QUE TE FALTABA)
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
-
-    if (toggle && menu) {
-        toggle.addEventListener("click", () => {
-            menu.classList.toggle("active");
-
-            toggle.textContent = menu.classList.contains("active") ? "✖" : "☰";
-        });
-
-        console.log("✅ menú kalon funcionando");
-    } else {
-        console.log("❌ menú no encontrado");
+    function stopAutoplay() {
+        clearInterval(autoplay);
     }
+
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+            goTo(current + 1);
+            stopAutoplay();
+            startAutoplay();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+            goTo(current - 1);
+            stopAutoplay();
+            startAutoplay();
+        });
+    }
+
+    dots.forEach(dot => {
+        dot.addEventListener("click", () => {
+            goTo(parseInt(dot.dataset.index));
+            stopAutoplay();
+            startAutoplay();
+        });
+    });
+
+    // Touch/swipe soporte
+    let touchStartX = 0;
+    const slider = document.querySelector(".hero-slider");
+
+    if (slider) {
+        slider.addEventListener("touchstart", e => {
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+
+        slider.addEventListener("touchend", e => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) {
+                goTo(diff > 0 ? current + 1 : current - 1);
+                stopAutoplay();
+                startAutoplay();
+            }
+        }, { passive: true });
+    }
+
+    startAutoplay();
 
 });

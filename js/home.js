@@ -1,26 +1,24 @@
+/* ============================================================
+   CASA AURORA — home.js
+============================================================ */
+
 window.addEventListener("load", () => {
     const intro = document.getElementById("intro");
+    if (!intro) return;
 
+    // Mostrar intro con animación, luego fade out
     setTimeout(() => {
-        intro.style.opacity = "0";
-    }, 2000); // ⏱️ menos tiempo visible
+        intro.classList.add("fade-out");
+    }, 2200);
 
     setTimeout(() => {
         intro.style.display = "none";
-    }, 2400); // ⏱️ desaparece más rápido
+    }, 3200);
 });
 
-
-// 🧭 NAVBAR SCROLL
+// Navbar scroll effect
 window.addEventListener("scroll", () => {
-    const navbar = document.querySelector(".navbar");
-
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
+    const navbar = document.getElementById("navbar") || document.querySelector(".navbar");
+    if (!navbar) return;
+    navbar.classList.toggle("scrolled", window.scrollY > 60);
 });
-
-
-console.log("menu funcionando");
