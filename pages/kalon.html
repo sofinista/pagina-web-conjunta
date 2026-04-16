@@ -18,7 +18,7 @@
 <nav class="navbar" id="navbar">
     <div class="menu-overlay" id="menu-overlay"></div>
     <a href="../index.html" class="logo">
-        <img src="../assets/icons/LogoKalon.png" alt="">
+        <img src="../assets/icons/LogoKalon.png" alt="Kalon">
     </a>
 
     <div class="menu-toggle" id="menu-toggle">
@@ -62,7 +62,7 @@
                 <span class="slide-tag">Bienestar · 02</span>
                 <h1>Relajación<br><em>Total</em></h1>
                 <p>Desconecta y renueva tu energía</p>
-                <a href="#experiencias" class="btn-slide">
+                <a href="#antes-despues" class="btn-slide">
                     <span>Explorar</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
                 </a>
@@ -85,7 +85,6 @@
 
     </div>
 
-    <!-- controles -->
     <button class="prev" aria-label="Anterior">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10L13 16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </button>
@@ -93,7 +92,6 @@
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </button>
 
-    <!-- dots -->
     <div class="slider-dots">
         <button class="dot active" data-index="0"></button>
         <button class="dot" data-index="1"></button>
@@ -111,61 +109,91 @@
         <div class="card">
             <div class="card-icon">◯</div>
             <div class="card-num">01</div>
-            <a href="faciales.html"><h3>Faciales</h3></a>
-            <p>Los tratamientos faciales son procedimientos especializados 
-            que limpian, hidratan y mejoran la piel del rostro, ayudando a reducir 
-            imperfecciones, prevenir el envejecimiento y mantener una apariencia saludable y luminosa.</p>
+            <h3><a href="faciales.html">Faciales</a></h3>
+            <p>Procedimientos especializados que limpian, hidratan y mejoran la piel del rostro, ayudando a reducir imperfecciones, prevenir el envejecimiento y mantener una apariencia saludable y luminosa.</p>
             <div class="card-divider"></div>
         </div>
         <div class="card">
             <div class="card-icon">◈</div>
             <div class="card-num">02</div>
-            <a href="corporales.html"><h3>Corporales</h3></a>
-            <p>Los tratamientos corporales ayudan a moldear, tonificar y mejorar el aspecto del cuerpo, 
-            reduciendo grasa localizada, celulitis y flacidez, mientras favorecen la circulación y el bienestar general.</p>
+            <h3><a href="corporales.html">Corporales</a></h3>
+            <p>Tratamientos que ayudan a moldear, tonificar y mejorar el aspecto del cuerpo, reduciendo grasa localizada, celulitis y flacidez, mientras favorecen la circulación y el bienestar general.</p>
             <div class="card-divider"></div>
         </div>
         <div class="card">
             <div class="card-icon">✦</div>
             <div class="card-num">03</div>
-            <a href="medicina-estetica.html"><h3>Medicina Estética</h3></a>
-            <p>La medicina estética ofrece tratamientos no invasivos que mejoran la apariencia facial, 
-            reducen signos de envejecimiento y aportan hidratación, volumen y firmeza a la piel.</p>
+            <h3><a href="medicina-estetica.html">Medicina Estética</a></h3>
+            <p>Tratamientos no invasivos que mejoran la apariencia facial, reducen signos de envejecimiento y aportan hidratación, volumen y firmeza a la piel.</p>
             <div class="card-divider"></div>
         </div>
     </div>
 </section>
 
-<!-- ANTES Y DESPUES-->
+<!-- ANTES Y DESPUÉS -->
 <section class="ba-gallery" id="antes-despues">
-
     <div class="section-header">
         <span class="section-tag">Resultados reales</span>
-        <h2>Antes & Después</h2>
+        <h2>Antes &amp; Después</h2>
     </div>
 
     <div class="ba-track" id="ba-track">
 
         <div class="ba-card">
-            <img src="../assets/images/kalon/antes1.jpg">
-            <img src="../assets/images/kalon/despues1.jpg">
-            <p>Rejuvenecimiento facial</p>
+            <div class="ba-labels">
+                <span class="ba-label">Antes</span>
+                <span class="ba-label after">Después</span>
+            </div>
+            <div class="ba-images">
+                <img src="../assets/images/kalon/antes1.jpg" alt="Antes rejuvenecimiento">
+                <img src="../assets/images/kalon/despues1.jpg" alt="Después rejuvenecimiento">
+            </div>
+            <div class="ba-info">
+                <p>Rejuvenecimiento facial</p>
+                <a href="faciales.html" class="ba-btn">
+                    Ver tratamiento
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                </a>
+            </div>
         </div>
 
         <div class="ba-card">
-            <img src="../assets/images/kalon/antes2.jpg">
-            <img src="../assets/images/kalon/despues2.jpg">
-            <p>Moldeo corporal</p>
+            <div class="ba-labels">
+                <span class="ba-label">Antes</span>
+                <span class="ba-label after">Después</span>
+            </div>
+            <div class="ba-images">
+                <img src="../assets/images/kalon/antes2.jpg" alt="Antes corporal">
+                <img src="../assets/images/kalon/despues2.jpg" alt="Después corporal">
+            </div>
+            <div class="ba-info">
+                <p>Moldeo corporal</p>
+                <a href="corporales.html" class="ba-btn">
+                    Ver tratamiento
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                </a>
+            </div>
         </div>
 
         <div class="ba-card">
-            <img src="../assets/images/kalon/antes3.jpg">
-            <img src="../assets/images/kalon/despues3.jpg">
-            <p>Tratamiento acne</p>
+            <div class="ba-labels">
+                <span class="ba-label">Antes</span>
+                <span class="ba-label after">Después</span>
+            </div>
+            <div class="ba-images">
+                <img src="../assets/images/kalon/antes3.jpg" alt="Antes acné">
+                <img src="../assets/images/kalon/despues3.jpg" alt="Después acné">
+            </div>
+            <div class="ba-info">
+                <p>Tratamiento acné</p>
+                <a href="faciales.html" class="ba-btn">
+                    Ver tratamiento
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                </a>
+            </div>
         </div>
 
     </div>
-
 </section>
 
 <!-- GALERÍA -->
@@ -176,15 +204,15 @@
     </div>
     <div class="gallery-grid">
         <div class="gallery-item large">
-            <img src="../assets/images/kalon/EspacioPrueba.jpg" alt="Espacio 1" loading="lazy">
+            <img src="../assets/images/kalon/EspacioPrueba.jpg" alt="Sala principal" loading="lazy">
             <div class="gallery-label">Sala principal</div>
         </div>
         <div class="gallery-item">
-            <img src="../assets/images/kalon/EspacioPrueba.jpg" alt="Espacio 2" loading="lazy">
+            <img src="../assets/images/kalon/EspacioPrueba.jpg" alt="Cabina facial" loading="lazy">
             <div class="gallery-label">Cabina facial</div>
         </div>
         <div class="gallery-item">
-            <img src="../assets/images/kalon/EspacioPrueba.jpg" alt="Espacio 3" loading="lazy">
+            <img src="../assets/images/kalon/EspacioPrueba.jpg" alt="Sala aromática" loading="lazy">
             <div class="gallery-label">Sala aromática</div>
         </div>
     </div>
@@ -212,17 +240,14 @@
 <footer class="footer">
     <div class="footer-inner">
         <span class="footer-logo">
-            <img src="../assets/icons/LogoKalon.png" alt="">
+            <img src="../assets/icons/LogoKalon.png" alt="Kalon">
         </span>
-
         <div class="footer-info">
             <p>C. C. Megacentro</p>
             <p>Carrera 53 #47-22, Local 420</p>
             <p>Medellín, Colombia</p>
         </div>
-
         <span class="footer-copy">© 2026 Kalon — Bienestar y estética</span>
-
         <a href="../index.html" class="footer-back">← Casa Aurora</a>
     </div>
 </footer>

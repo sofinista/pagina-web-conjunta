@@ -1,53 +1,38 @@
 /* ============================================================
-   CORPORALES — personalidad fuerte / escultural
+   CORPORALES — overrides sobre kalon.css base
 ============================================================ */
 
-/* Hero más intenso */
-.hero-slider .slide-overlay {
-    background: linear-gradient(
-        120deg,
-        rgba(28,28,28,0.85),
-        rgba(28,28,28,0.3)
-    );
-}
-
-/* Texto más marcado */
-.hero-slider h1 {
-    letter-spacing: 0.03em;
-}
-
-/* Cards más “potentes” */
-.card {
-    border: 1px solid rgba(0,0,0,0.08);
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
-}
-
-/* Grid más dinámico */
-.grid {
+/* Grid 2 columnas — más tratamientos */
+.services .grid {
     grid-template-columns: repeat(2, 1fr);
 }
 
-/* Beneficios más marcados */
+/* Overlay un poco más intenso (escultura/fuerza) */
+.hero-slider .slide-overlay {
+    background: linear-gradient(
+        120deg,
+        rgba(26,26,26,0.80) 0%,
+        rgba(26,26,26,0.32) 55%,
+        rgba(26,26,26,0.08) 100%
+    );
+}
+
+/* Cards hover un poco más pronunciado */
+.card:hover {
+    box-shadow: 0 12px 40px rgba(105,210,194,0.1);
+}
+
+/* Beneficios weight un poco mayor */
 .beneficios li {
-    font-weight: 500;
+    letter-spacing: 0.12em;
 }
 
-/* Secciones con más aire */
-.services {
-    padding-top: 140px;
-}
+/* Espaciado */
+.services { padding-top: 130px; }
+.experiences { padding-top: 130px; }
 
-.experiences {
-    padding-top: 140px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 960px) {
+    .services .grid { grid-template-columns: 1fr; }
+    .services { padding-top: 80px; }
+    .experiences { padding-top: 80px; }
 }

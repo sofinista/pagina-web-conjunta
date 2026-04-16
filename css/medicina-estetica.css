@@ -1,51 +1,43 @@
-/* MEDICINA ESTÉTICA — estilo elegante / limpio */
+/* ============================================================
+   MEDICINA ESTÉTICA — overrides sobre kalon.css base
+============================================================ */
 
-/* Overlay más suave que corporales */
-.hero-slider .slide-overlay {
-    background: linear-gradient(
-        120deg,
-        rgba(28,28,28,0.75),
-        rgba(28,28,28,0.2)
-    );
-}
-
-/* Texto más delicado */
-.hero-slider h1 {
-    letter-spacing: 0.01em;
-}
-
-/* Cards más suaves */
-.card {
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-}
-
-/* Grid más limpio */
-.grid {
+/* Grid 3 columnas — solo 3 tratamientos */
+.services .grid {
     grid-template-columns: repeat(3, 1fr);
 }
 
-/* Beneficios más sutiles */
+/* Overlay más suave y etéreo */
+.hero-slider .slide-overlay {
+    background: linear-gradient(
+        125deg,
+        rgba(26,26,26,0.72) 0%,
+        rgba(26,26,26,0.20) 50%,
+        rgba(26,26,26,0.02) 100%
+    );
+}
+
+/* Cards aún más limpias */
+.card {
+    border: 1px solid rgba(105,210,194,0.06);
+}
+
+.card:hover {
+    box-shadow: 0 8px 28px rgba(105,210,194,0.08);
+}
+
+/* Texto más delicado */
 .beneficios li {
-    font-weight: 400;
+    font-weight: 300;
+    letter-spacing: 0.1em;
 }
 
 /* Espaciado elegante */
-.services {
-    padding-top: 120px;
-}
+.services { padding-top: 120px; }
+.experiences { padding-top: 120px; }
 
-.experiences {
-    padding-top: 120px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 960px) {
+    .services .grid { grid-template-columns: 1fr; }
+    .services { padding-top: 80px; }
+    .experiences { padding-top: 80px; }
 }
